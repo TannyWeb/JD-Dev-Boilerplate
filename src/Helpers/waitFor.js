@@ -4,20 +4,20 @@
 */
 
 // Usage #1 - CSS Selector - Wait for an element to exist
-waitFor('body', myFunction);
+// waitFor('body', myFunction);
 
 // Usage #2 - Function - Write a custom function that returns either true or false
-waitFor(function() {
-	if (window.myVariable !== undefined) {
-		return true;
-	} else {
-		return false;
-	}
-}, myFunction);
+// waitFor(function() {
+// 	if (window.myVariable !== undefined) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }, myFunction);
 
 // Usage #3 - Array - Pass in an array of functions and/or CSS selectors
 // that ALL MUST RETURN TRUE for your callback to fire
-waitFor([ myTest, myTest2, myTest3 ], myFunction);
+// waitFor([ myTest, myTest2, myTest3 ], myFunction);
 
 /**
  * 
@@ -26,7 +26,7 @@ waitFor([ myTest, myTest2, myTest3 ], myFunction);
  * @param {number} [interval=100] - How many milliseconds between each attempt
  * @param {number} [maxAttempts=1000] - Maximum number of attempts before giving up
  */
-function waitFor(assertion, callback, interval, maxAttempts) {
+export default function waitFor(assertion, callback, interval, maxAttempts) {
 	var INT = interval || 100;
 	var LIMIT = maxAttempts || 1000;
 	var test, timer;

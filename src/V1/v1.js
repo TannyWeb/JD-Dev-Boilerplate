@@ -1,8 +1,7 @@
 
 
 import './v1.scss';
-
-console.log('hello')
+import  waitFor  from '../Helpers/waitFor'
 
 waitFor('body', initT01)
 
@@ -16,6 +15,8 @@ function initT01() {
 
 function t01Changes() {
     document.body.classList.add('test01_loaded');
-
+    
     // add your changes here
+    console.log('hello')
+
 }
